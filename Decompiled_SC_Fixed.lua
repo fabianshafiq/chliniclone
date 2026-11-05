@@ -1439,8 +1439,8 @@ local LoadChilliLibrary = function()
         end;
       end;
       local function jA()
-        local ka,ya,ra={},ipairs,U[72](na());
-        for ma,Wa in ya(U:g2(ra)) do
+        local ka = {}
+        for ma, Wa in ipairs(na()) do
           ma=Aa[Wa];
           if ma then
             ma.b.Visible=ba=="" or Wa:lower():find(ba,1,true)~=nil;
@@ -3403,8 +3403,8 @@ local LoadChilliLibrary = function()
             return;
           end;
         end;
-        o=U[72](e:Collect());
-        if e:Save(O,U:g2(o)) then
+        o = e:Collect()
+        if e:Save(O, o) then
           R:Set("",true);
           N();
           S(O);
@@ -3489,9 +3489,7 @@ local LoadChilliLibrary = function()
         S(G);
         q.Notify("Config Imported","Imported: "..G..". Open Load Config to apply, or Set Startup Config for Auto Load.",5);
       end,"Creates a config only; use Load Config or Set Startup after","").Quick=false;
-      o=H;
-      H={};
-      U:H2(H,0,o[2],o[3],o[4],o[5]);
+      H = { o[2], o[3], o[4], o[5] }
       for U,U in ipairs(H) do
         U.Skip=true;
       end;
